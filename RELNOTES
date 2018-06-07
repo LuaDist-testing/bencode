@@ -1,3 +1,7 @@
+2012-11-27  RELEASE-2.0.1  Moritz Wilhelmy <moritz@wzff.de>
+	The License has been changed to the same terms as Lua, rather than
+	public domain.
+
 2012-11-27  RELEASE-2.0  Moritz Wilhelmy <moritz@wzff.de>
 	This is the second release of lua-bencode.
 

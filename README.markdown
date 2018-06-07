@@ -1,18 +1,18 @@
 Name
-----
+====
 
 bencode, lua-bencode or whatever name you call it.
 
 
 License
--------
+=======
 
-While not a license, all files in this repository have been placed in the
-public domain because the authors do not believe in intellectual property.
+The bencode module may be copied under the same terms as Lua.
+Please see COPYING for more information.
 
 
 Installation
-------------
+============
 
 There are three possible ways install it:
 
@@ -21,34 +21,34 @@ There are three possible ways install it:
  * copy bencode.lua to some place in package.path by hand
 
 What's it all about?
---------------------
+====================
 
 This is a module for the lua programming language for decoding and encoding
 bencoded data which can be used to read and write torrent files for bittorrent.
 More information on bencoding can be found [here][2].
 
 Authors
--------
+=======
 
  * Kristofer Karlsson, who wrote the decoder, islist and isdictionary
  * Moritz Wilhelmy, who wrote the rest and glued everything together
 
 
 Project Homepage
-----------------
+================
 
 There is no such thing as a project homepage, you have to live with the
 bitbucket page, which is located [here][3].
 
 
 Bugs
-----
+====
 bitbucket generously offers [issue tracking][4] to projects hosted by them, so
 please use this facility to report any bugs and features you encounter.
 
 
 Wiki
-----
+====
 Seriously?
 
 [1]: http://luarocks.org/
