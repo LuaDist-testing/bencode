@@ -6,8 +6,8 @@
 
 ]]--
 
-require 'bencode'
-
+local bencode = require 'bencode'
+  
 -- Print anything - including nested tables
 -- code shamelessly copied from http://lua-users.org/wiki/TableSerialization
 function table_print (tt, indent, done)

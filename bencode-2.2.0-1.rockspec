@@ -1,24 +1,24 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "bencode"
-version = "2.1.0-1"
+version = "2.2.0-1"
 
 -- LuaDist source
 source = {
-  tag = "2.1.0-1",
+  tag = "2.2.0-1",
   url = "git://github.com/LuaDist-testing/bencode.git"
 }
 -- Original source
 -- source = {
---     url = "https://bitbucket.org/wilhelmy/lua-bencode/downloads/lua-bencode-2.1.0.zip",
---     md5 = "72dc0f02de5c02154d5001a406ed39f4"
+--     url = "https://bitbucket.org/wilhelmy/lua-bencode/downloads/lua-bencode-2.2.0.zip",
+--     md5 = "4d6d1e2e2f6d25d891e7ab85872f3b3b"
 -- }
 
 description = {
     summary  = "library for encoding and decoding bencoded data",
     detailed = "bencode is a module for encoding and decoding bencoded data for the bittorrent filesharing protocols",
     license  = "MIT/X11",
-    homepage = "http://bitbucket.org/wilhelmy/lua-bencode/"
+    homepage = "https://bitbucket.org/wilhelmy/lua-bencode/"
 }
 
 dependencies = {
@@ -26,8 +26,8 @@ dependencies = {
 }
 
 build = {
-    type = "builtin",
-    modules = {
-        bencode = "bencode.lua",
+    type = "none",
+    install = {
+        lua = { "bencode.lua", "bencode-push.lua" }
     }
 }

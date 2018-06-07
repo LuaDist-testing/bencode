@@ -1,7 +1,11 @@
 --[[
+	Lua module for handling bencoded data as used by bittorrent.
 
-	public domain lua-module for handling bittorrent-bencoded data.
 	This module includes both a recursive decoder and a recursive encoder.
+
+	See the file COPYING included with the lua-bencode distribution for
+	details on copyright holders and the terms and conditions which apply
+	when copying this file.
 
 ]]--
 
@@ -9,7 +13,7 @@ local sort, concat, insert = table.sort, table.concat, table.insert
 local pairs, ipairs, type, tonumber = pairs, ipairs, type, tonumber
 local sub, find = string.sub, string.find
 
-module "bencode"
+local M = {}
 
 -- helpers
 
@@ -98,7 +102,7 @@ end
 
 -- call recursive bencoder function with empty table, stringify that table.
 -- this is the only encode* function visible to module users.
-function encode(x)
+M.encode = function (x)
 
 	local t = {}
 	local err, val = encode_rec(t,x)
@@ -123,7 +127,7 @@ local function decode_list(s, index)
 	local t = {} 
 	while sub(s, index, index) ~= "e" do 
 		local obj, ev
-		obj, index, ev = decode(s, index) 
+		obj, index, ev = M.decode(s, index) 
 		if not obj then return obj, index, ev end
 		insert(t, obj)
 	end 
@@ -136,10 +140,10 @@ local function decode_dictionary(s, index)
 	while sub(s, index, index) ~= "e" do 
 		local obj1, obj2, ev
 
-		obj1, index, ev = decode(s, index) 
+		obj1, index, ev = M.decode(s, index) 
 		if not obj1 then return obj1, index, ev end
 
-		obj2, index, ev = decode(s, index) 
+		obj2, index, ev = M.decode(s, index) 
 		if not obj2 then return obj2, index, ev end
 
 		t[obj1] = obj2 
@@ -160,7 +164,7 @@ local function decode_string(s, index)
 end 
 	 
 	 
-function decode(s, index) 
+M.decode = function (s, index) 
 	if not s then return nil, "no data", nil end
 	index = index or 1 
 	local t = sub(s, index, index) 
@@ -178,3 +182,5 @@ function decode(s, index)
 		return nil, "invalid type", t
 	end 
 end
+
+return M

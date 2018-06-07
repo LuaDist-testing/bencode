@@ -1,3 +1,11 @@
+2016-04-14  RELEASE-2.2.0 Moritz Wilhelmy <moritz@wzff.de>
+	Replace obsolete call to "module" function by explicitly using and
+	returning a table to contain the module. Thanks once more to xopxe.
+
+	Additionally, API documentation has been added to the doc directory.
+
+	Merge pushsupport branch, but leave it undocumented for now.
+
 2014-01-11  RELEASE-2.1.0  Moritz Wilhelmy <moritz@wzff.de>
 	xopxe has reported and fixed another bug where strings that were one
 	byte shorter than declared would not be properly detected when the
