@@ -1,17 +1,17 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "bencode"
-version = "1-1"
+version = "2.0-1"
 
 -- LuaDist source
 source = {
-  tag = "1-1",
+  tag = "2.0-1",
   url = "git://github.com/LuaDist-testing/bencode.git"
 }
 -- Original source
 -- source = {
---     url = "http://cdn.bitbucket.org/wilhelmy/lua-bencode/downloads/bencode-1.tar.gz",
---     md5 = "8e752b15cdb93a5841d3b89d06cc8582"
+--     url = "https://bitbucket.org/wilhelmy/lua-bencode/downloads/lua-bencode-2.0.zip",
+--     md5 = "45702f2ba6725247ce62a32c2381e3ca"
 -- }
 
 description = {
