@@ -1,3 +1,8 @@
+2014-01-11  RELEASE-2.1.0  Moritz Wilhelmy <moritz@wzff.de>
+	xopxe has reported and fixed another bug where strings that were one
+	byte shorter than declared would not be properly detected when the
+	string was the last element to be decoded.
+
 2012-11-27  RELEASE-2.0.1  Moritz Wilhelmy <moritz@wzff.de>
 	The License has been changed to the same terms as Lua, rather than
 	public domain.
